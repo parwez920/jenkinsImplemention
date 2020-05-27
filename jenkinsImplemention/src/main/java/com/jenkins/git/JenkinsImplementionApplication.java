@@ -1,5 +1,7 @@
 package com.jenkins.git;
 
+import javax.annotation.PostConstruct;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -10,6 +12,7 @@ public class JenkinsImplementionApplication {
 
 	public static Logger logger= LoggerFactory.getLogger(JenkinsImplementionApplication.class);
 	
+	@PostConstruct
 	public void init() {
 		logger.info("Application started......");
 	}
